@@ -1,16 +1,16 @@
 "use client";
 import Footer from "@/components/portfolio/Footer";
-import { Dock } from "@/components/portfolio/Dock";
-import { Hero } from "@/components/portfolio/Hero";
 import PasswordInput from "@/components/PasswordInput";
-import { Projects } from "@/components/portfolio/Projects";
-import { Skills } from "@/components/portfolio/Skills";
 import { PortfolioType, usePortfolioStore } from "@/store/usePortfolioStore";
 import { useEffect } from "react";
 import { ApplyChangesButton } from "@/components/ApplyChangesButton";
 import { ScrollProgressView } from "portfolioui";
-import { Achievements } from "../components/portfolio/Achievements";
 import ResumeAIChatbot from "@/components/chatbot-component";
+import Navbar from "@/components/layout/Navbar";
+import Hero from "@/components/sections/Hero";
+import Skills from "@/components/sections/Skills";
+import Experience from "@/components/sections/Experience";
+import Achievements from "@/components/sections/Achievements";
 
 interface HomePageProps {
   portfolio: PortfolioType;
@@ -21,7 +21,6 @@ export default function HomePage({ portfolio, url }: HomePageProps) {
   const { updateState } = usePortfolioStore();
 
   useEffect(() => {
-    console.log("url: ", url);
     updateState(portfolio);
   }, [updateState, portfolio, url]);
 
@@ -31,10 +30,11 @@ export default function HomePage({ portfolio, url }: HomePageProps) {
         <PasswordInput />
         <ApplyChangesButton />
         <ScrollProgressView className="from-sky-400 to-sky-700 via-sky-500" />
-        <Dock />
+        {/* <Dock /> */}
+        <Navbar />
         <Hero />
         <Skills />
-        <Projects />
+        <Experience />
         <Achievements />
         <ResumeAIChatbot />
         <Footer />

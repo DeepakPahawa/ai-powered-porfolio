@@ -25,6 +25,5 @@ export async function POST(req: NextRequest) {
 
 export function GET() {
   const resumeStorage = ResumeStorage.getInstance();
-  console.log("🚀 ~ GET ~ resumeContent:", resumeStorage.getResumeContent());
   return NextResponse.json({ resume: resumeStorage.getResumeContent() });
 }
