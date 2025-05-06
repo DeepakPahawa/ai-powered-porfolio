@@ -11,6 +11,7 @@ import Skills from "@/components/sections/Skills";
 import Experience from "@/components/sections/Experience";
 import Achievements from "@/components/sections/Achievements";
 import Footer from "@/components/layout/Footer";
+import Contact from "@/components/sections/Contact";
 
 interface HomePageProps {
   portfolio: PortfolioType;
@@ -36,6 +37,7 @@ export default function HomePage({ portfolio, url }: HomePageProps) {
         <Skills />
         <Experience />
         <Achievements />
+        <Contact />
         <ResumeAIChatbot />
         <Footer />
       </div>
