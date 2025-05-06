@@ -1,36 +1,46 @@
-import { Metadata } from "next";
-import HomePage from "./HomePage";
-import { fetchPortfolioDetails } from "@/lib/server/fetchPortfolio.service";
+"use client";
+// import PasswordInput from "@/components/PasswordInput";
+// import { PortfolioType, usePortfolioStore } from "@/store/usePortfolioStore";
+// import { useEffect } from "react";
+// import { ApplyChangesButton } from "@/components/ApplyChangesButton";
+import { ScrollProgressView } from "portfolioui";
+import ResumeAIChatbot from "@/components/chatbot-component";
+import Navbar from "@/components/layout/Navbar";
+import Hero from "@/components/sections/Hero";
+import Skills from "@/components/sections/Skills";
+import Experience from "@/components/sections/Experience";
+import Achievements from "@/components/sections/Achievements";
+import Footer from "@/components/layout/Footer";
+import Contact from "@/components/sections/Contact";
 
-export async function generateMetadata({}): Promise<Metadata> {
-  const { portfolio, url } = await fetchPortfolioDetails();
-  if (portfolio?.personalInfo?.name) {
-    return {
-      title: `${portfolio.personalInfo.name} | Portfolio`,
-      description: portfolio.heroInfo.description,
-      keywords: `${portfolio.personalInfo.name} Portfolio`,
-      alternates: {
-        canonical: url,
-      },
-    };
-  }
+// interface HomePageProps {
+//   portfolio: PortfolioType;
+//   url: string;
+// }
 
-  return {
-    title: "Portfolio",
-    description: "Portfolio of a professional",
-    keywords: "Portfolio, Professional",
-  };
-}
+export default function HomePage() {
+  // const { updateState } = usePortfolioStore();
 
-export default async function Page() {
-  const { portfolio, url, error } = await fetchPortfolioDetails();
+  // useEffect(() => {
+  //   updateState(portfolio);
+  // }, [updateState, portfolio, url]);
 
-  if (!!error) {
-    return (
-      <div className="text-center mx-fit mx-auto">
-        <p className="text-red-500 text-xl">{error}</p>
+  return (
+    <div className="min-h-screen overflow-hidden space-y-10 w-full">
+      <div className="pb-5 relative">
+        {/* <PasswordInput />
+        <ApplyChangesButton /> */}
+        <ScrollProgressView className="from-sky-400 to-sky-700 via-sky-500" />
+        {/* <Dock /> */}
+        <Navbar />
+        <Hero />
+        <Skills />
+        <Experience />
+        <Achievements />
+        <Contact />
+        <ResumeAIChatbot />
+        <Footer />
       </div>
-    );
-  }
-  return <HomePage portfolio={portfolio} url={url} />;
+    </div>
+  );
 }
