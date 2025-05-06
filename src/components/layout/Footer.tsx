@@ -9,8 +9,8 @@ export default function Footer() {
           <div className="md:col-span-2">
             <h3 className="text-2xl font-bold mb-4">Portfolio</h3>
             <p className="text-muted-foreground mb-4 max-w-md">
-              A showcase of my professional work, skills, and achievements.
-              Let's connect and build something amazing together.
+              {`A showcase of my professional work, skills, and achievements.
+              Let's connect and build something amazing together.`}
             </p>
             <div className="flex space-x-4">
               <Button variant="ghost" size="icon" aria-label="GitHub">

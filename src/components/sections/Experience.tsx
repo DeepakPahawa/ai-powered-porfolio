@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
@@ -27,7 +26,7 @@ export default function Experience() {
         >
           <h2 className="heading-lg mb-4">My Experience</h2>
           <p className="text-muted-foreground mx-auto max-w-2xl">
-            A chronological journey through my professional career, showcasing the roles I've had and the impact I've made.
+            {`A chronological journey through my professional career, showcasing the roles I've had and the impact I've made.`}
           </p>
         </motion.div>
 

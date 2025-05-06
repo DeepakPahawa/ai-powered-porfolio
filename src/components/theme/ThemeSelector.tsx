@@ -48,6 +48,7 @@ export default function ThemeSelector() {
                   colorMap[item.value as keyof typeof colorMap],
                   color === item.value && 'ring-2 ring-foreground'
                 )}
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 onClick={() => setColor(item.value as any)}
                 title={item.name}
               >
@@ -66,6 +67,7 @@ export default function ThemeSelector() {
                   'flex items-center gap-2 p-2 rounded-md',
                   backgroundStyle === item.value && 'bg-accent'
                 )}
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 onClick={() => setBackgroundStyle(item.value as any)}
               >
                 <div className={cn(
