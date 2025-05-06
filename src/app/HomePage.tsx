@@ -1,5 +1,4 @@
 "use client";
-import Footer from "@/components/portfolio/Footer";
 import PasswordInput from "@/components/PasswordInput";
 import { PortfolioType, usePortfolioStore } from "@/store/usePortfolioStore";
 import { useEffect } from "react";
@@ -11,6 +10,7 @@ import Hero from "@/components/sections/Hero";
 import Skills from "@/components/sections/Skills";
 import Experience from "@/components/sections/Experience";
 import Achievements from "@/components/sections/Achievements";
+import Footer from "@/components/layout/Footer";
 
 interface HomePageProps {
   portfolio: PortfolioType;
