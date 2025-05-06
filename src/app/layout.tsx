@@ -3,7 +3,7 @@
 import "./globals.css";
 
 import { ThemeProvider } from "@/components/ui/theme-provider";
-import { AuthProvider, ToasterTopRight } from "portfolioui";
+// import { AuthProvider, ToasterTopRight } from "portfolioui";
 
 export default function RootLayout({
   children,
@@ -19,14 +19,14 @@ export default function RootLayout({
           defaultTheme="system"
           disableTransitionOnChange
         >
-          <AuthProvider
+          {/* <AuthProvider
             accessKeyFromProject={
               process.env.NEXT_PUBLIC_PORTFOLIO_ACCESS_KEY ?? ""
             }
-          >
+          > */}
             <main>{children}</main>
-            <ToasterTopRight />
-          </AuthProvider>
+            {/* <ToasterTopRight />
+          </AuthProvider> */}
         </ThemeProvider>
       </body>
     </html>
