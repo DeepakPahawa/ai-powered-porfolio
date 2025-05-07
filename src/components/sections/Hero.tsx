@@ -36,7 +36,7 @@ export default function Hero() {
           >
             <p className="text-primary font-medium mb-2">{`Hello, I'm`}</p>
             <h1 className="heading-xl mb-6">
-              Deepak Pahawa
+              Roy Arora
               <span className="block text-primary">Full Stack Developer</span>
             </h1>
             <p className="text-muted-foreground text-lg mb-8 max-w-md">

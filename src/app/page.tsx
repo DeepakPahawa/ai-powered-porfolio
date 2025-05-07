@@ -18,7 +18,7 @@ import Contact from "@/components/sections/Contact";
 //   url: string;
 // }
 
-export default function HomePage() {
+export default function page() {
   // const { updateState } = usePortfolioStore();
 
   // useEffect(() => {
@@ -34,8 +34,8 @@ export default function HomePage() {
         {/* <Dock /> */}
         <Navbar />
         <Hero />
-        <Skills />
         <Experience />
+        <Skills />
         <Achievements />
         <Contact />
         <ResumeAIChatbot />

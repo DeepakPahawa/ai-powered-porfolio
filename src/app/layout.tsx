@@ -16,7 +16,7 @@ export default function RootLayout({
         <ThemeProvider
           attribute="class"
           enableSystem
-          defaultTheme="system"
+          defaultTheme="light"
           disableTransitionOnChange
         >
           {/* <AuthProvider

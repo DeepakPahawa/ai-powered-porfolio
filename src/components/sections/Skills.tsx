@@ -48,7 +48,7 @@ export default function Skills() {
             >
               <div className="flex justify-between items-center mb-2">
                 <h3 className="font-semibold">{skill.name}</h3>
-                <span className="text-sm text-muted-foreground">{skill.level}%</span>
+                <span className="text-sm text-muted-foreground">{(skill.level / 10).toFixed(1)}/10</span>
               </div>
               <div className="h-2 bg-muted rounded-full overflow-hidden">
                 <motion.div

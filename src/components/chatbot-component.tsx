@@ -38,7 +38,7 @@ const COMMON_RECRUITER_QUESTIONS: SuggestedQuestion[] = [
   { id: '7', text: 'Tell me about your leadership experience?' },
   { id: '8', text: 'How do you handle tight deadlines?' },
   { id: '9', text: 'What salary are you expecting?' },
-  { id: '10', text: 'Do you have any questions for me?' },
+  // { id: '10', text: 'Do you have any questions for me?' },
   { id: '11', text: 'How do you keep up with industry trends?' },
   { id: '12', text: 'Describe a situation where you had to resolve a conflict' },
 ];
@@ -49,7 +49,7 @@ const ResumeAIChatbot: React.FC<{ isDarkMode?: boolean }> = ({ isDarkMode = fals
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '0',
-      content: "Hello! I'm an AI assistant trained on this Deepak Pahawa's resume. How can I help you today?",
+      content: "Hello! I'm Roy Arora's AI assistant trained on his resume. How can I help you today?",
       sender: 'bot',
       timestamp: new Date(),
     },
@@ -250,7 +250,7 @@ const ResumeAIChatbot: React.FC<{ isDarkMode?: boolean }> = ({ isDarkMode = fals
                 <Bot size={18} className="text-white" />
               </Avatar>
               <div>
-                <h3 className="font-medium text-sm">{`Deepak's AI Assistant`}</h3>
+                <h3 className="font-medium text-sm">{`Roy Arora's AI Assistant`}</h3>
                 {isLoading && <p className="text-xs opacity-70">Typing...</p>}
               </div>
             </div>

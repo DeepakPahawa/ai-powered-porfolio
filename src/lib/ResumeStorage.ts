@@ -1,12 +1,12 @@
 export class ResumeStorage {
   private static instance: ResumeStorage;
   private resumeContent: string = `
-   Deepak Pahawa
+   Roy Arora
 
 Senior JavaScript Engineer with a focus on ReactJS
 
 Dehradun, India	+91 996 397 60 68
-Born 19/11/1986	deepakpahawa19@gmail.com
+Born 19/11/1986	royarora19@gmail.com
 Indian citizen	LinkedIn | Github
 My notice period is 60 days.
 
@@ -68,6 +68,13 @@ HOBBIES
 
 Road trips | Reading | Meditation | Contributor to Open-Source Community
 
+I am expecting as per market standards. I am open to work in any location in India and willing to travel if project demands.
+
+I have been in multiple conflicts and I have resolved them by listening to both the parties and understanding their point of view. I try to find a common ground where both the parties can agree and then work towards that. I also try to keep my emotions in check and not let them cloud my judgment. I believe that conflicts are a part of life and they can be resolved if both the parties are willing to listen and understand each other.
+
+I've delivered multiple projects in my career. The most challenging one was the Intuit Quickbooks project, where I had to migrate a monolithic application to microservices and micro frontends. It took 3 years of hard work and dedication, but we were able to successfully complete the migration and roll out new features along the way. This project taught me a lot about teamwork, communication, and problem-solving.
+
+Webex Assist was one of the most tight deadlines project, where I had to deliver a new feature in 2 weeks. I had to work long hours and weekends to meet the deadline, but we were able to deliver the feature on time. This project taught me a lot about time management, prioritization, and working under pressure.
   `;
 
   private constructor() {}
