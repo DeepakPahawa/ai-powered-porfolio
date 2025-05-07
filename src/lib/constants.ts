@@ -26,7 +26,7 @@ export const BACKGROUND_COLORS = [
 export const EXPERIENCE = [
   {
     id: 1,
-    title: "Senior React Engineer",
+    title: "Lead Software Engineer",
     company: "Lowe’s, Bangalore, India",
     project: "Cart & PreTender",
     description:
@@ -36,7 +36,7 @@ export const EXPERIENCE = [
   },
   {
     id: 2,
-    title: "Senior React Engineer",
+    title: "Lead Software Engineer",
     company: "Cisco, Bangalore, India",
     project: "Webex Assist",
     description:
