@@ -88,6 +88,12 @@ const ResumeAIChatbot: React.FC<{ isDarkMode?: boolean }> = ({
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
+useEffect(() => {
+  setTimeout(() => {
+    setIsOpen(true);
+  }, 5000);
+}, [setIsOpen]);
+
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
