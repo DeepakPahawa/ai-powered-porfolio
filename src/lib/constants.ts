@@ -5,7 +5,6 @@ export const serverRoutes = {
 export const databaseRoutes = {
   PORTFOLIO: "database/portfolio.json",
 };
-
 export const COLORS = [
   { name: "Red", value: "red" },
   { name: "Rose", value: "rose" },
@@ -27,29 +26,42 @@ export const BACKGROUND_COLORS = [
 export const EXPERIENCE = [
   {
     id: 1,
-    title: "Senior Software Engineer",
-    company: "Tech Innovations Inc.",
+    title: "Senior React Engineer",
+    company: "Lowe’s, Bangalore, India",
+    project: "Cart & PreTender",
     description:
-      "Led a team of developers to build scalable web applications using React and Node.js. Implemented CI/CD pipelines and improved performance by 40%.",
-    period: "2020 - Present",
+      "I am leading two Scrum teams of 10 and 4 members each, developing multiple features in ReactJS, Redux and Material-UI. One team is responsible of developing new features and fixing bugs and another one is responsible for creating common components and drive the architecture of the whole Store Selling Applications. ",
+    period: "2022 - Present",
     logo: "https://images.pexels.com/photos/5598296/pexels-photo-5598296.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
     id: 2,
-    title: "Full Stack Developer",
-    company: "Digital Solutions Ltd",
+    title: "Senior React Engineer",
+    company: "Cisco, Bangalore, India",
+    project: "Webex Assist",
     description:
-      "Developed responsive web applications using Angular and Express. Collaborated with UX/UI designers to implement modern interfaces.",
-    period: "2018 - 2020",
+      "I led a Scrum team of 5, developing 6 features in ReactJS, Redux and Material-UI. Consumed 30+ Rest APIs and Web Sockets to connect the doctors with the patients that enabled doctors to have next generation features like annotation, screenshot and remote request during the video call. Re-Architected the entire platform by implementing Design Patterns like Separation of Concern and Don't Repeat Yourself concepts to make it optimized, scalable and maintainable, which improved the performance of the platform 40%.  ",
+    period: "2021 - 2022",
     logo: "https://images.pexels.com/photos/5926389/pexels-photo-5926389.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
     id: 3,
-    title: "Frontend Developer",
-    company: "CreativeWeb Agency",
+    title: "Senior React Engineer",
+    company: "Altimetrik, Bangalore, India",
+    project: "Intuit Quickbooks",
     description:
-      "Created interactive web experiences with JavaScript, HTML, and CSS. Optimized website performance and implemented responsive designs.",
-    period: "2016 - 2018",
+      "I started as a Frontend engineer and grew to Team lead of 5 members. Decoupled and migrated the complete platform from BackboneJS to ReactJS and Redux. Created a UI library for components to be shared with other teams in the company which saved 30% time for other teams.",
+    period: "2015 - 2021",
+    logo: "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  },
+  {
+    id: 4,
+    title: "Senior QA Analyst",
+    company: "Tech Mahindra, Hyderabad, India",
+    project: "Swisscom - All IP Fulfillment",
+    description:
+      " All IP Fulfillment - for Swisscom to provide fiber/copper-based broadband and mobile services through a Siebel application. I worked in a team of 7 developing the manual and automation testing environment for the order management system. I was responsible for the E2E test life cycle, i.e. requirements gathering, test strategy, test planning, test execution, automation and communicating status to stakeholders from the client.",
+    period: "2011 - 2015",
     logo: "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
 ];
@@ -63,15 +75,19 @@ export const SKILLS = [
   { name: "CSS/SCSS", level: 85 },
   { name: "Tailwind CSS", level: 90 },
   { name: "GraphQL", level: 75 },
-  { name: "SQL", level: 78 },
-  { name: "AWS", level: 70 },
+  { name: "Redux", level: 78 },
+  { name: "MongoDB", level: 88 },
+  { name: "Docker", level: 88 },
+  { name: "CI/CD", level: 78 },
+  { name: "Jest", level: 90 },
+  { name: "REST API", level: 80 },
 ];
 
 export const ACHIEVEMENTS = [
   {
-    title: "Best Developer Award",
+    title: "Associate of the Month Award",
     description:
-      "Recognized for exceptional contributions to product development and innovation",
+      "Awarded for outstanding performance and dedication to the team",
     year: "2023",
     icon: "Trophy",
   },
@@ -85,7 +101,7 @@ export const ACHIEVEMENTS = [
   {
     title: "Open Source Contributor",
     description:
-      "Major contributor to popular React component library with over 5k stars on GitHub",
+      "Build Multi Color Bookmark FlowWise, to bookmark a piece of code and share within a team, leading to save up to 70% of code analysis time",
     year: "2021",
     icon: "Github",
   },
@@ -93,7 +109,7 @@ export const ACHIEVEMENTS = [
     title: "Product Launch Success",
     description:
       "Successfully led the development team for a product with 100k+ users in first month",
-    year: "2019",
+    year: "2024",
     icon: "Rocket",
   },
 ];

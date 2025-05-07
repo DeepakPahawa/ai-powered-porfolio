@@ -48,9 +48,10 @@ const ResumeAIChatbot: React.FC<{ isDarkMode?: boolean }> = ({ isDarkMode = fals
   const [isMinimized, setIsMinimized] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
     {
-      id: '0',
-      content: "Hello! I'm Roy Arora's AI assistant trained on his resume. How can I help you today?",
-      sender: 'bot',
+      id: "0",
+      content:
+        "Hi there! I am Roy Arora's AI assistant. I can provide you with information regarding his professional career. Please let me know how I may assist you.",
+      sender: "bot",
       timestamp: new Date(),
     },
   ]);
@@ -221,33 +222,43 @@ const ResumeAIChatbot: React.FC<{ isDarkMode?: boolean }> = ({ isDarkMode = fals
   };
 
   return (
-    <div className="fixed bottom-4 right-4 z-50">
+    <div className="fixed bottom-4 right-4 z-50 bg-background text-fore">
       {/* Chatbot button when closed */}
       {!isOpen && (
-        <Button 
+        <Button
           onClick={toggleChatbot}
           className={`rounded-full w-16 h-16 flex items-center justify-center shadow-lg ${
-            isDarkMode ? 'bg-blue-600 hover:bg-blue-700' : 'bg-blue-500 hover:bg-blue-600'
+            isDarkMode
+              ? "bg-blue-600 hover:bg-blue-700"
+              : "bg-blue-500 hover:bg-blue-600"
           }`}
         >
           <Bot size={24} className="text-white" />
         </Button>
       )}
-      
+
       {/* Chatbot window when open */}
       {isOpen && (
-        <Card className={`w-80 md:w-96 shadow-lg border overflow-hidden flex flex-col ${
-          isDarkMode ? 'bg-gray-800 border-gray-700 text-white' : 'bg-white border-gray-200'
-        }`}>
+        <Card
+          className={`w-80 md:w-96 shadow-lg border overflow-hidden flex flex-col ${
+            isDarkMode
+              ? "bg-gray-800 border-gray-700 text-white"
+              : "bg-white border-gray-200"
+          }`}
+        >
           {/* Header */}
-          <CardHeader className={`py-3 px-4 flex flex-row items-center justify-between space-y-0 border-b ${
-            isDarkMode ? 'border-gray-700' : 'border-gray-200'
-          }`}>
-            <div className="flex items-center">
-              <Avatar className={`h-8 w-8 mr-2 ${
-                isDarkMode ? 'bg-blue-600' : 'bg-blue-500'
-              }`}>
-                <Bot size={18} className="text-white" />
+          <CardHeader
+            className={`py-3 px-4 flex flex-row items-center justify-between space-y-0 border-b ${
+              isDarkMode ? "border-gray-700" : "border-gray-200"
+            }`}
+          >
+            <div className="flex items-center ">
+              <Avatar
+                className={`h-8 w-8 mr-2 items-center justify-center ${
+                  isDarkMode ? "bg-blue-600" : "bg-blue-500"
+                }`}
+              >
+                <Bot size={24} className="text-white " />
               </Avatar>
               <div>
                 <h3 className="font-medium text-sm">{`Roy Arora's AI Assistant`}</h3>
@@ -255,38 +266,58 @@ const ResumeAIChatbot: React.FC<{ isDarkMode?: boolean }> = ({ isDarkMode = fals
               </div>
             </div>
             <div className="flex gap-1">
-              <Button variant="ghost" size="sm" className="h-8 w-8 p-0" onClick={toggleMinimize}>
-                {isMinimized ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+              <Button
+                variant="ghost"
+                size="sm"
+                className="h-8 w-8 p-0"
+                onClick={toggleMinimize}
+              >
+                {isMinimized ? (
+                  <ChevronUp size={16} />
+                ) : (
+                  <ChevronDown size={16} />
+                )}
               </Button>
-              <Button variant="ghost" size="sm" className="h-8 w-8 p-0" onClick={toggleChatbot}>
+              <Button
+                variant="ghost"
+                size="sm"
+                className="h-8 w-8 p-0"
+                onClick={toggleChatbot}
+              >
                 <Minimize2 size={16} />
               </Button>
             </div>
           </CardHeader>
-          
+
           {/* Chat content */}
           {!isMinimized && (
             <>
               <CardContent className="p-0 flex-1">
-                <ScrollArea className={`h-[350px] p-4 ${
-                  isDarkMode ? 'bg-gray-800' : 'bg-gray-50'
-                }`}>
+                <ScrollArea
+                  className={`h-[350px] p-4 ${
+                    isDarkMode ? "bg-gray-800" : "bg-gray-50"
+                  }`}
+                >
                   {messages.map((msg) => (
                     <div
                       key={msg.id}
                       className={`flex mb-4 ${
-                        msg.sender === 'user' ? 'justify-end' : 'justify-start'
+                        msg.sender === "user" ? "justify-end" : "justify-start"
                       }`}
                     >
                       <div
                         className={`max-w-[80%] px-4 py-2 rounded-lg ${
-                          msg.sender === 'user'
-                            ? isDarkMode ? 'bg-blue-600 text-white' : 'bg-blue-500 text-white'
-                            : isDarkMode ? 'bg-gray-700' : 'bg-gray-200'
+                          msg.sender === "user"
+                            ? isDarkMode
+                              ? "bg-blue-600 text-white"
+                              : "bg-blue-500 text-white"
+                            : isDarkMode
+                              ? "bg-gray-700"
+                              : "bg-gray-200"
                         }`}
                       >
                         <p className="text-sm">{msg.content}</p>
-                        
+
                         {/* Show citations if available */}
                         {/* {msg.citations && msg.citations.length > 0 && (
                           <div className={`mt-2 pt-2 border-t ${
@@ -299,11 +330,11 @@ const ResumeAIChatbot: React.FC<{ isDarkMode?: boolean }> = ({ isDarkMode = fals
                             ))}
                           </div>
                         )} */}
-                        
+
                         <p className="text-xs opacity-70 mt-1">
                           {msg.timestamp.toLocaleTimeString([], {
-                            hour: '2-digit',
-                            minute: '2-digit',
+                            hour: "2-digit",
+                            minute: "2-digit",
                           })}
                         </p>
                       </div>
@@ -312,18 +343,20 @@ const ResumeAIChatbot: React.FC<{ isDarkMode?: boolean }> = ({ isDarkMode = fals
                   <div ref={messagesEndRef} />
                 </ScrollArea>
               </CardContent>
-              
+
               {/* Suggested questions */}
-              <div className={`px-4 py-2 border-t flex flex-wrap gap-2 ${
-                isDarkMode ? 'border-gray-700' : 'border-gray-200'
-              }`}>
+              <div
+                className={`px-4 py-2 border-t flex flex-wrap gap-2 ${
+                  isDarkMode ? "border-gray-700" : "border-gray-200"
+                }`}
+              >
                 {suggestedQuestions.map((question) => (
                   <Badge
                     key={question.id}
                     className={`cursor-pointer transition-colors duration-200 py-1 px-2 text-xs ${
-                      isDarkMode 
-                        ? 'bg-gray-700 hover:bg-gray-600 text-white border-gray-600'
-                        : 'bg-gray-100 hover:bg-gray-200 border-gray-300'
+                      isDarkMode
+                        ? "bg-gray-700 hover:bg-gray-600 text-white border-gray-600"
+                        : "bg-gray-100 hover:bg-gray-200 border-gray-300"
                     }`}
                     variant="outline"
                     onClick={() => handleQuestionClick(question.text)}
@@ -332,11 +365,13 @@ const ResumeAIChatbot: React.FC<{ isDarkMode?: boolean }> = ({ isDarkMode = fals
                   </Badge>
                 ))}
               </div>
-              
+
               {/* Input area */}
-              <CardFooter className={`p-2 border-t ${
-                isDarkMode ? 'border-gray-700' : 'border-gray-200'
-              }`}>
+              <CardFooter
+                className={`p-2 border-t ${
+                  isDarkMode ? "border-gray-700" : "border-gray-200"
+                }`}
+              >
                 <div className="flex w-full items-center space-x-2">
                   <Button
                     variant="ghost"
@@ -358,19 +393,21 @@ const ResumeAIChatbot: React.FC<{ isDarkMode?: boolean }> = ({ isDarkMode = fals
                     onChange={(e) => setInput(e.target.value)}
                     placeholder="Type your question..."
                     className={`flex-1 ${
-                      isDarkMode ? 'bg-gray-700 border-gray-600 text-white' : ''
+                      isDarkMode ? "bg-gray-700 border-gray-600 text-white" : ""
                     }`}
                     onKeyPress={(e) => {
-                      if (e.key === 'Enter') {
+                      if (e.key === "Enter") {
                         handleSendMessage(input);
                       }
                     }}
                   />
-                  <Button 
-                    size="icon" 
+                  <Button
+                    size="icon"
                     onClick={() => handleSendMessage(input)}
                     disabled={!input.trim()}
-                    className={isDarkMode ? 'bg-blue-600 hover:bg-blue-700' : ''}
+                    className={
+                      isDarkMode ? "bg-blue-600 hover:bg-blue-700" : ""
+                    }
                   >
                     <Send size={18} />
                   </Button>
